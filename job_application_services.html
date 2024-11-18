@@ -3,228 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ikenna Esenwa LLC - Job Application Services</title>
+  <title>Pricing Plans</title>
   <style>
-    /* Reset and basic styling */
-    * {
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       color: #333;
-      line-height: 1.6;
     }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Brand color and styling */
-    h1, h2, h3, h4 {
-      color: #0056b3; /* Brand blue */
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #0056b3;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-    .btn:hover {
-      background-color: #003d80;
-    }
-
-    /* Header */
-    header {
+    .pricing-header {
       text-align: center;
-      padding: 20px;
-      background: #0056b3;
-      color: #fff;
-      border-radius: 8px;
-      margin-bottom: 20px;
+      padding: 50px 20px;
+      background-color: #007BFF;
+      color: white;
     }
-    
-    /* Pay-As-You-Go Section */
-    .pay-as-you-go {
-      background-color: #eaf2fb;
-      padding: 20px;
-      text-align: center;
-      border-radius: 8px;
-      margin-bottom: 20px;
+    .pricing-header h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
-    .pay-as-you-go h3 {
-      color: #0056b3;
-    }
-    .pay-as-you-go .price {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #0056b3;
-      margin: 15px 0;
-    }
-
-    /* Pricing Table */
     .pricing-table {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
-      margin-top: 20px;
+      max-width: 1000px;
+      margin: 50px auto;
+      border-collapse: collapse;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
     }
-    .pricing-card {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ddd;
+      padding: 15px;
       text-align: center;
-      transition: transform 0.3s;
     }
-    .pricing-card:hover {
-      transform: translateY(-5px);
+    .pricing-table th {
+      background-color: #007BFF;
+      color: white;
     }
-    .pricing-card h3 {
-      margin-bottom: 10px;
-      color: #0056b3;
+    .pricing-table td {
+      font-size: 0.9em;
     }
-    .pricing-card p {
-      font-size: 1.1em;
-      margin-bottom: 10px;
+    .pricing-table .checkmark {
+      color: #28a745;
+      font-weight: bold;
     }
-    .price {
+    .pricing-table .crossmark {
+      color: #dc3545;
+      font-weight: bold;
+    }
+    .pricing-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px;
+    }
+    .plan {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 15px;
+      width: 300px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .plan h3 {
       font-size: 1.5em;
-      font-weight: bold;
-      margin: 15px 0;
-    }
-
-    /* Highlighted Standard Plan */
-    .highlight {
-      color: #0056b3;
-      font-weight: bold;
-    }
-    .recommended {
-      background-color: #e1f0ff;
-      border: 2px solid #0056b3;
-      transform: scale(1.05);
-      padding: 25px;
-      position: relative;
-    }
-    .recommended::after {
-      content: "Most Popular";
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #ffcc00;
-      color: #000;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
-
-    /* Additional Features Section */
-    .features {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: #eaf2fb;
-      border-radius: 8px;
-    }
-    .features h3 {
-      color: #0056b3;
-      margin-bottom: 15px;
-    }
-    .features ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    .features li {
+      color: #007BFF;
       margin-bottom: 10px;
     }
-    
-    /* Footer */
-    footer {
+    .plan p {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+    .plan .price {
+      font-size: 1.8em;
+      color: #333;
+      font-weight: bold;
+    }
+    .cta {
       text-align: center;
-      margin-top: 20px;
-      padding: 10px;
-      background: #0056b3;
-      color: #fff;
-      border-radius: 8px;
+      margin: 50px 0;
+    }
+    .cta a {
+      text-decoration: none;
+      background-color: #007BFF;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 25px;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    .cta a:hover {
+      background-color: #0056b3;
+    }
+    .addons {
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: left;
+    }
+    .addons h3 {
+      color: #007BFF;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .addons ul {
+      list-style: none;
+      padding: 0;
+    }
+    .addons ul li {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+    .addons ul li strong {
+      color: #333;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <h1>Ikenna Esenwa LLC</h1>
-    <p>Your trusted partner in job application services</p>
+  <header class="pricing-header">
+    <h1>Our Pricing Plans</h1>
+    <p>Find the perfect plan tailored to your needs, with flexible options and unbeatable features.</p>
   </header>
-
-  <!-- Pay-As-You-Go Option -->
-  <section class="pay-as-you-go">
-    <h3>Flexible Pay-As-You-Go Option</h3>
-    <p>Perfect for flexibility without a monthly commitment</p>
-    <p class="price">$5 per application</p>
-    <a href="#" class="btn">Get Started</a>
+  
+  <section>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th>Basic Plan</th>
+          <th>Standard Plan</th>
+          <th>Premium Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ATS-Optimized Resume Creation</td>
+          <td class="checkmark">&#10003;</td>
+          <td class="checkmark">&#10003;</td>
+          <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Job Application Submission</td>
+          <td class="checkmark">&#10003;</td>
+          <td class="checkmark">&#10003;</td>
+          <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+          <td>24/7 Support</td>
+          <td class="crossmark">&#10007;</td>
+          <td class="crossmark">&#10007;</td>
+          <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Assigned Executive Assistant</td>
+          <td class="crossmark">&#10007;</td>
+          <td class="crossmark">&#10007;</td>
+          <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Priority Access to New Services</td>
+          <td class="crossmark">&#10007;</td>
+          <td class="crossmark">&#10007;</td>
+          <td class="checkmark">&#10003;</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
-  <!-- Main Pricing Table -->
-  <section class="container">
-    <h2>Subscription Plans</h2>
-    <p>Choose a plan that fits your job search needs. All prices are in USD.</p>
-
-    <div class="pricing-table">
-      <!-- Basic Plan -->
-      <div class="pricing-card">
-        <h3>Basic Plan</h3>
-        <p>200 Applications / Month</p>
-        <p class="price">$220 / month</p>
-        <p><span class="highlight">$2,400</span> / year (save 9%)</p>
-        <p>Ideal for steady-paced job searching</p>
-        <a href="#" class="btn">Get Started</a>
-      </div>
-
-      <!-- Standard Plan (Most Popular) -->
-      <div class="pricing-card recommended">
-        <h3>Standard Plan</h3>
-        <p>400 Applications / Month</p>
-        <p class="price">$375 / month</p>
-        <p><span class="highlight">$4,000</span> / year (save 11%)</p>
-        <p>Our best value, perfect for actively applying weekly</p>
-        <a href="#" class="btn">Get Started</a>
-      </div>
-
-      <!-- Premium Plan -->
-      <div class="pricing-card">
-        <h3>Premium Plan</h3>
-        <p>600 Applications / Month</p>
-        <p class="price">$600 / month</p>
-        <p><span class="highlight">$5,500</span> / year (save 8%)</p>
-        <p>AI Interview Support</p>
-        <p>Ideal for high-volume, ambitious job seekers</p>
-        <a href="#" class="btn">Get Started</a>
-      </div>
+  <section class="pricing-section">
+    <div class="plan">
+      <h3>Basic Plan</h3>
+      <p>200 Applications / Month</p>
+      <p class="price">$220 / month</p>
+      <p>$2,400 / year</p>
+    </div>
+    <div class="plan">
+      <h3>Standard Plan</h3>
+      <p>400 Applications / Month</p>
+      <p class="price">$375 / month</p>
+      <p>$4,000 / year</p>
+    </div>
+    <div class="plan">
+      <h3>Premium Plan</h3>
+      <p>500 Applications / Month</p>
+      <p class="price">$600 / month</p>
+      <p>$5,500 / year</p>
+      <p>Includes AI Interview Support, 24/7 support, and an assigned executive assistant.</p>
     </div>
   </section>
 
-  <!-- Additional Features Section -->
-  <section class="features">
-    <h3>Additional Add-On Services, Features and Benefits</h3>
+  <section class="addons">
+    <h3>Targeted Add-Ons</h3>
     <ul>
-      <li><strong>Enhanced Add-On Services:</strong> LinkedIn profile optimization and personalized job search sessions available.</li>
-      <li><strong>Annual Plan Perks:</strong> Annual subscribers receive priority support and a personalized job search strategy session to optimize their job hunt.</li>
-      <li><strong>Loyalty Program:</strong> Monthly subscribers enjoy a complimentary month after six consecutive months.</li>
-      <li><strong>Interview Guarantee for Premium Clients:</strong> Extra month free if no interview invitations are received after three months.</li>
+      <li><strong>AI Interview Support:</strong> $300/month. Discrete AI answers questions in real-time during video interviews.</li>
+      <li><strong>Cover Letters (Per Application):</strong> $15/application. Tailored, ATS-friendly cover letters.</li>
+      <li><strong>LinkedIn Profile Optimization:</strong> $75 (one-time). Create a professional, ATS-optimized LinkedIn profile.</li>
+      <li><strong>Salary Negotiation Assistance:</strong> $200/one-time. Get expert guidance to maximize your compensation package.</li>
+      <li><strong>Reference Verification:</strong> $75/one-time. Ensure your references are prepared to support your application effectively.</li>
     </ul>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Ikenna Esenwa LLC - All Rights Reserved</p>
-  </footer>
-
+  <div class="cta">
+    <a href="#subscribe">Subscribe Now</a>
+  </div>
 </body>
 </html>
